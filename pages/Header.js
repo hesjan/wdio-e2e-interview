@@ -21,15 +21,12 @@ class Header {
 		browser.keys('Enter');
 	}
 	clickOnCheckoutButton() {
-		console.log('Clicking on checkout butotn');
+		$('#divBagItems').waitForDisplayed(5000, true);
 		this.checkoutButton.waitForEnabled();
-		this.checkoutButton.moveTo();
-		console.log(this.checkoutButton);
+		// this.checkoutButton.moveTo();
 		this.checkoutButton.click();
-		console.log('Checkout button clicked');
 	}
 	hoverOverCheckoutButton() {
-		console.log('Hovering over checkout button');
 		this.checkoutButton.waitForEnabled();
 		this.checkoutButton.moveTo();
 	}

@@ -3,11 +3,11 @@ class Checkout {
 		return $('#BasketDiv');
 	}
 	get productDescription() {
-		return $('.productdesc')
+		return $('tbody .productdesc');
 	}
 	isProductDisplayedOnCheckoutByName(name) {
-		this.section.waitForDisplayed()
-		return this.productDescription.$(`*=${name}`).isDisplayed()
+		this.section.waitForDisplayed();
+		return this.productDescription.$(`*=${name}`).isDisplayed();
 	}
 }
 export default new Checkout();

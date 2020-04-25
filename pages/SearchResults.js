@@ -12,6 +12,7 @@ class PromotionalBanner {
 		return this.listOfProducts.length;
 	}
 	findProductByName(name) {
+		this.productsSection.waitForDisplayed();
 		this.productsSection.$(`*=${name}`).scrollIntoView();
 		return this.productsSection.$(`*=${name}`);
 	}
