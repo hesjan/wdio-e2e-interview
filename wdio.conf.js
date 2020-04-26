@@ -1,4 +1,6 @@
 const expect = require('chai').expect;
+const seleniumVersion = process.env.SELENIUM_VERSION || '3.141.5';
+const chromeDriverVersion = process.env.CHROMEDRIVER || '81.0.4044.69';
 exports.config = {
 	//
 	// ====================
@@ -111,15 +113,17 @@ exports.config = {
 			{
 				ignoreExtraDrivers: true,
 				installArgs: {
+					version: seleniumVersion,
 					drivers: {
-						chrome: { version: '81.0.4044.69' },
-						// firefox: { version: '0.26.0' }
+						chrome: { version: chromeDriverVersion },
+						firefox: { version: '0.26.0' },
 					},
 				},
 				args: {
 					drivers: {
-						chrome: { version: '81.0.4044.69' },
-						// firefox: { version: '0.26.0' }
+						version: seleniumVersion,
+						chrome: { version: chromeDriverVersion },
+						firefox: { version: '0.26.0' },
 					},
 				},
 			},

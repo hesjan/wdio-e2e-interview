@@ -6,6 +6,7 @@ class Menu {
 		return $('li.sdHover .SubMenuWrapper');
 	}
 	hoverMenuItemByName(name) {
+		this.section.$(`*=${name}`).waitForDisplayed();
 		this.section.$(`*=${name}`).moveTo();
 	}
 	selectSubMenuItemByName(name) {
