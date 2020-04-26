@@ -9,9 +9,6 @@ class Menu {
 		this.section.$(`*=${name}`).moveTo();
 	}
 	selectSubMenuItemByName(name) {
-		console.log($('li.sdHover .SubMenuWrapper').getText());
-		console.log('-----------------');
-		console.log(this.flyOutSubMenu.getText());
 		this.flyOutSubMenu.$(`*=${name}`).waitForDisplayed();
 		this.flyOutSubMenu.$(`*=${name}`).click();
 	}

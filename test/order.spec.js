@@ -10,12 +10,14 @@ import { cartUrl } from '../config/urls';
 describe('User', () => {
 	const testData = [
 		{
+			tcNumber: 'TC1',
 			productCategory: 'PIŁKA NOŻNA',
 			productSubCategory: 'Nike Tiempo',
 			productName: 'React Tiempo Legend 8 Pro IC Indoor/Court Soccer Shoe',
 			productSize: '10 (45)',
 		},
 		{
+			tcNumber: 'TC2',
 			productCategory: 'MĘŻCZYŹNI',
 			productSubCategory: 'Buty do biegania',
 			productName: 'Free RN 5.0 Running Shoes Mens',
@@ -24,7 +26,7 @@ describe('User', () => {
 	];
 
 	testData.forEach(data => {
-		it(`should be able to order '${data.productCategory}': '${data.productName}' using top menu to find it`, () => {
+		it(`${data.tcNumber}. should be able to order '${data.productCategory}': '${data.productName}' using top menu to find it`, () => {
 			startBrowserWithResolution(1600, 1200);
 			PromotionalBanner.closeIfDisplayed();
 			Menu.hoverOverMenuItemAndSelectProductFromFlyout(data.productCategory, data.productSubCategory);

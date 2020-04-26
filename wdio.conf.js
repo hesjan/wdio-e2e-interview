@@ -17,7 +17,7 @@ exports.config = {
 	// NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
 	// directory is where your package.json resides, so `wdio` will be called from there.
 	//
-	specs: ['./test/**/order*.spec.js'],
+	specs: ['./test/**/*.spec.js'],
 	// Patterns to exclude.
 	exclude: [
 		// 'path/to/excluded/files'
@@ -142,8 +142,7 @@ exports.config = {
 	// Test reporter for stdout.
 	// The only one supported by default is 'dot'
 	// see also: https://webdriver.io/docs/dot-reporter.html
-	reporters: ['spec', ['allure', { outputDir: 'allure-results' }]],
-
+	reporters: ['spec'],
 	//
 	// Options to be passed to Mocha.
 	// See the full list at http://mochajs.org/
@@ -231,7 +230,8 @@ exports.config = {
 	 */
 	afterTest: function (test, context, { error, result, duration, passed, retries }) {
 		if (!passed) {
-			browser.takeScreenshot();
+			// Adding getTime in to make screenshot unique
+			browser.saveScreenshot(`./screenshots/${test.title.substring(0, test.title.indexOf('.'))}-${new Date().getTime()}.png`);
 		}
 		browser.reloadSession();
 	},
