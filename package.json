@@ -5,7 +5,8 @@
   "scripts": {
     "test": "./node_modules/.bin/wdio wdio.conf.js",
     "test:order": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/order.spec.js",
-    "test:search": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/search.spec.js"
+    "test:search": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/search.spec.js",
+    "test:profile": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/createProfile.spec.js"
   },
   "keywords": [
     "webdriverIO",

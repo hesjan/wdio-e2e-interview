@@ -3,7 +3,7 @@ Interview task
 ##Description
 
 - Currently implemented tests are running in chrome 81.
-- They are using browser with resolution 1600 x 1200. Definitely they should be written also for other resolutions because application is responsive.
+- Tests are using browser with resolution 1600 x 1200. Definitely they should be written also for other resolutions because application is responsive.
 - Tests are using data from production so after some time products could become no longer available.
 
 ## Libraries

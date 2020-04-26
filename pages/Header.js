@@ -8,6 +8,9 @@ class Header {
 	get searchLoopButton() {
 		return $('#HeaderGroup a#cmdSearch');
 	}
+	get loginButton() {
+		return $('a.login');
+	}
 	get emptyBag() {
 		return $('#divBagTotalLink .HeaderBagEmptyMessage');
 	}
@@ -29,6 +32,10 @@ class Header {
 	hoverOverCheckoutButton() {
 		this.checkoutButton.waitForEnabled();
 		this.checkoutButton.moveTo();
+	}
+	clickOnLoginButton() {
+		this.loginButton.waitForDisplayed();
+		this.loginButton.click();
 	}
 }
 export default new Header();
