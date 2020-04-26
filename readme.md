@@ -39,3 +39,6 @@ Interview task
 
 ```npm test:search```
 
+**Run Only Registration Test**
+
+```npm test:registration```
